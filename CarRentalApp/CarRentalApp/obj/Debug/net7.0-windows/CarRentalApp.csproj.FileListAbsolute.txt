@@ -1,0 +1,17 @@
+E:\NetProject\CarRentalApp\CarRentalApp\bin\Debug\net7.0-windows\CarRentalApp.exe
+E:\NetProject\CarRentalApp\CarRentalApp\bin\Debug\net7.0-windows\CarRentalApp.deps.json
+E:\NetProject\CarRentalApp\CarRentalApp\bin\Debug\net7.0-windows\CarRentalApp.runtimeconfig.json
+E:\NetProject\CarRentalApp\CarRentalApp\bin\Debug\net7.0-windows\CarRentalApp.dll
+E:\NetProject\CarRentalApp\CarRentalApp\bin\Debug\net7.0-windows\CarRentalApp.pdb
+E:\NetProject\CarRentalApp\CarRentalApp\obj\Debug\net7.0-windows\CarRentalApp.csproj.AssemblyReference.cache
+E:\NetProject\CarRentalApp\CarRentalApp\obj\Debug\net7.0-windows\CarRentalApp.Form1.resources
+E:\NetProject\CarRentalApp\CarRentalApp\obj\Debug\net7.0-windows\CarRentalApp.csproj.GenerateResource.cache
+E:\NetProject\CarRentalApp\CarRentalApp\obj\Debug\net7.0-windows\CarRentalApp.GeneratedMSBuildEditorConfig.editorconfig
+E:\NetProject\CarRentalApp\CarRentalApp\obj\Debug\net7.0-windows\CarRentalApp.AssemblyInfoInputs.cache
+E:\NetProject\CarRentalApp\CarRentalApp\obj\Debug\net7.0-windows\CarRentalApp.AssemblyInfo.cs
+E:\NetProject\CarRentalApp\CarRentalApp\obj\Debug\net7.0-windows\CarRentalApp.csproj.CoreCompileInputs.cache
+E:\NetProject\CarRentalApp\CarRentalApp\obj\Debug\net7.0-windows\CarRentalApp.dll
+E:\NetProject\CarRentalApp\CarRentalApp\obj\Debug\net7.0-windows\refint\CarRentalApp.dll
+E:\NetProject\CarRentalApp\CarRentalApp\obj\Debug\net7.0-windows\CarRentalApp.pdb
+E:\NetProject\CarRentalApp\CarRentalApp\obj\Debug\net7.0-windows\CarRentalApp.genruntimeconfig.cache
+E:\NetProject\CarRentalApp\CarRentalApp\obj\Debug\net7.0-windows\ref\CarRentalApp.dll
