@@ -149,15 +149,9 @@
             // 
             this.cbTypeOfCar.Font = new System.Drawing.Font("Matura MT Script Capitals", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbTypeOfCar.FormattingEnabled = true;
-            this.cbTypeOfCar.Items.AddRange(new object[] {
-            "Honda",
-            "Toyota",
-            "Lada",
-            "Buggy",
-            "Maruti"});
             this.cbTypeOfCar.Location = new System.Drawing.Point(79, 389);
             this.cbTypeOfCar.Name = "cbTypeOfCar";
-            this.cbTypeOfCar.Size = new System.Drawing.Size(121, 52);
+            this.cbTypeOfCar.Size = new System.Drawing.Size(200, 52);
             this.cbTypeOfCar.TabIndex = 11;
             // 
             // Form1
@@ -180,6 +174,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

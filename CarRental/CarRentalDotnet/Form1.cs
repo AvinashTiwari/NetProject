@@ -10,11 +10,14 @@ using System.Windows.Forms;
 
 namespace CarRentalDotnet
 {
+   
     public partial class Form1 : Form
     {
+        private readonly CarRentalEntities carRentalEntities;
         public Form1()
         {
             InitializeComponent();
+            carRentalEntities = new CarRentalEntities();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -41,6 +44,15 @@ namespace CarRentalDotnet
 
                 if (isValid)
                 {
+                    var rentalRecord = new CarRentalRecord();
+                    rentalRecord.CustomerName = customerName;
+                    rentalRecord.DateRented = dateOut;
+                    rentalRecord.DateReturned = dateIn;
+                    rentalRecord.Cost = Convert.ToDecimal(cost);
+                    rentalRecord.TypeOfCarId = Convert.ToInt32(cbTypeOfCar.SelectedValue);
+                    carRentalEntities.CarRentalRecords.Add(rentalRecord);
+                    carRentalEntities.SaveChanges();
+
                     MessageBox.Show($"Customer Name : {customerName} \n\r " +
                         $"Date Rented : {dateOut} \n\r " +
                         $"Date Returned : {dateIn} \n\r " +
@@ -52,6 +64,14 @@ namespace CarRentalDotnet
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            var cars = carRentalEntities.TypesOfCars.ToList();
+            cbTypeOfCar.DisplayMember = "Name";
+            cbTypeOfCar.ValueMember = "id";
+            cbTypeOfCar.DataSource = cars;
         }
     }
 }
