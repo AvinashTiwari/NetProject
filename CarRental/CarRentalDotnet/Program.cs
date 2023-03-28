@@ -16,7 +16,7 @@ namespace CarRentalDotnet
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AddRentalRecord());
+            Application.Run(new MainWindow());
         }
     }
 }

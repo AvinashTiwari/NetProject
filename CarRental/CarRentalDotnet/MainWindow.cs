@@ -16,5 +16,10 @@ namespace CarRentalDotnet
         {
             InitializeComponent();
         }
+
+        private void addRendtalRecordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
