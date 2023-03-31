@@ -19,7 +19,17 @@ namespace CarRentalDotnet
 
         private void addRendtalRecordToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            var addRentalRecord = new AddRentalRecord();
+            addRentalRecord.MdiParent = this;
+            
+            addRentalRecord.Show();
+        }
 
+        private void manageVechicleListingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var vechicleListing = new ManageVechLisiting();
+            vechicleListing.MdiParent = this;
+            vechicleListing.Show();
         }
     }
 }

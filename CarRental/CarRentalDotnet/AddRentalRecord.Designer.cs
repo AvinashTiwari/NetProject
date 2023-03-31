@@ -48,9 +48,9 @@
             this.label1.Font = new System.Drawing.Font("Matura MT Script Capitals", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(91, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(568, 79);
+            this.label1.Size = new System.Drawing.Size(592, 79);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Car Rental System";
+            this.label1.Text = "Add Rental Record";
             // 
             // label2
             // 
@@ -154,7 +154,7 @@
             this.cbTypeOfCar.Size = new System.Drawing.Size(200, 52);
             this.cbTypeOfCar.TabIndex = 11;
             // 
-            // Form1
+            // AddRentalRecord
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -172,8 +172,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "AddRentalRecord";
+            this.Text = "Add Rental Record";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

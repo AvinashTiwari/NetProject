@@ -28,30 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.manageVechicleListingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addVechicleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.removeVechicleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editVechicleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewListingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageRentalRecordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addRendtalRecordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewArchiveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editRentalRecordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Matura MT Script Capitals", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(103, 47);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(462, 79);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Main Window";
             // 
             // menuStrip1
             // 
@@ -76,38 +61,10 @@
             // 
             // manageVechicleListingToolStripMenuItem
             // 
-            this.manageVechicleListingToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addVechicleToolStripMenuItem,
-            this.removeVechicleToolStripMenuItem,
-            this.editVechicleToolStripMenuItem,
-            this.viewListingToolStripMenuItem});
             this.manageVechicleListingToolStripMenuItem.Name = "manageVechicleListingToolStripMenuItem";
             this.manageVechicleListingToolStripMenuItem.Size = new System.Drawing.Size(182, 24);
             this.manageVechicleListingToolStripMenuItem.Text = "Manage Vechicle Listing";
-            // 
-            // addVechicleToolStripMenuItem
-            // 
-            this.addVechicleToolStripMenuItem.Name = "addVechicleToolStripMenuItem";
-            this.addVechicleToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.addVechicleToolStripMenuItem.Text = "Add vechicle";
-            // 
-            // removeVechicleToolStripMenuItem
-            // 
-            this.removeVechicleToolStripMenuItem.Name = "removeVechicleToolStripMenuItem";
-            this.removeVechicleToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.removeVechicleToolStripMenuItem.Text = "Remove Vechicle";
-            // 
-            // editVechicleToolStripMenuItem
-            // 
-            this.editVechicleToolStripMenuItem.Name = "editVechicleToolStripMenuItem";
-            this.editVechicleToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.editVechicleToolStripMenuItem.Text = "Edit Vechicle";
-            // 
-            // viewListingToolStripMenuItem
-            // 
-            this.viewListingToolStripMenuItem.Name = "viewListingToolStripMenuItem";
-            this.viewListingToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.viewListingToolStripMenuItem.Text = "View Listing";
+            this.manageVechicleListingToolStripMenuItem.Click += new System.EventHandler(this.manageVechicleListingToolStripMenuItem_Click);
             // 
             // manageRentalRecordToolStripMenuItem
             // 
@@ -143,12 +100,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1318, 545);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.menuStrip2);
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainWindow";
-            this.Text = "Main Window";
+            this.Text = "Car Rental";
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             this.ResumeLayout(false);
@@ -157,15 +114,9 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.ToolStripMenuItem manageVechicleListingToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addVechicleToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem removeVechicleToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editVechicleToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viewListingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manageRentalRecordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addRendtalRecordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewArchiveToolStripMenuItem;
