@@ -39,11 +39,11 @@
             // gvVechicleList
             // 
             this.gvVechicleList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvVechicleList.Location = new System.Drawing.Point(32, 126);
+            this.gvVechicleList.Location = new System.Drawing.Point(16, 93);
             this.gvVechicleList.Name = "gvVechicleList";
             this.gvVechicleList.RowHeadersWidth = 51;
             this.gvVechicleList.RowTemplate.Height = 24;
-            this.gvVechicleList.Size = new System.Drawing.Size(372, 293);
+            this.gvVechicleList.Size = new System.Drawing.Size(745, 293);
             this.gvVechicleList.TabIndex = 0;
             // 
             // label1
@@ -58,7 +58,7 @@
             // 
             // btnAddCar
             // 
-            this.btnAddCar.Location = new System.Drawing.Point(494, 117);
+            this.btnAddCar.Location = new System.Drawing.Point(32, 390);
             this.btnAddCar.Name = "btnAddCar";
             this.btnAddCar.Size = new System.Drawing.Size(99, 48);
             this.btnAddCar.TabIndex = 2;
@@ -68,7 +68,7 @@
             // 
             // btnEditCar
             // 
-            this.btnEditCar.Location = new System.Drawing.Point(494, 199);
+            this.btnEditCar.Location = new System.Drawing.Point(175, 392);
             this.btnEditCar.Name = "btnEditCar";
             this.btnEditCar.Size = new System.Drawing.Size(99, 46);
             this.btnEditCar.TabIndex = 3;
@@ -78,7 +78,7 @@
             // 
             // btnDelteCar
             // 
-            this.btnDelteCar.Location = new System.Drawing.Point(494, 279);
+            this.btnDelteCar.Location = new System.Drawing.Point(376, 387);
             this.btnDelteCar.Name = "btnDelteCar";
             this.btnDelteCar.Size = new System.Drawing.Size(99, 51);
             this.btnDelteCar.TabIndex = 4;

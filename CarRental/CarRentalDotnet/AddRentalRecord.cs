@@ -68,7 +68,12 @@ namespace CarRentalDotnet
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            var cars = carRentalEntities.TypesOfCars.ToList();
+            var cars = carRentalEntities.TypesOfCars.Select(q => new
+            {
+                ID = q.id,
+                Name = q.Make + " " +  q.Model
+            }).ToList();
+             
             cbTypeOfCar.DisplayMember = "Name";
             cbTypeOfCar.ValueMember = "id";
             cbTypeOfCar.DataSource = cars;

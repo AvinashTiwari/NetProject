@@ -21,11 +21,13 @@ namespace CarRentalDotnet
 
         private void ManageVechLisiting_Load(object sender, EventArgs e)
         {
-            var cars = _db.TypesOfCars.Select(q => new {ID = q.id, Name = q.Make}).ToList();
+            var cars = _db.TypesOfCars.Select(q => new {ID = q.id, Make = q.Make,
+                Model = q.Model, 
+                VIN = q.VIN,
+                Year = q.Year , 
+                LicensePlateNumber = q.LicensePlateNumber}).ToList();
             gvVechicleList.DataSource = cars;
- 
-            gvVechicleList.Columns[0].HeaderText = "ID";
-            gvVechicleList.Columns[0].HeaderText = "Name";
+  
         }
 
         private void btnAddCar_Click(object sender, EventArgs e)
