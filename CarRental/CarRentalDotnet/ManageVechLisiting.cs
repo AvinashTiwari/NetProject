@@ -25,9 +25,12 @@ namespace CarRentalDotnet
                 Model = q.Model, 
                 VIN = q.VIN,
                 Year = q.Year , 
-                LicensePlateNumber = q.LicensePlateNumber}).ToList();
+                LicensePlateNumber = q.LicensePlateNumber,
+                q.id}).ToList();
             gvVechicleList.DataSource = cars;
-  
+            gvVechicleList.Columns[5].Visible = false;
+
+
         }
 
         private void btnAddCar_Click(object sender, EventArgs e)
