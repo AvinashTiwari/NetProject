@@ -36,17 +36,27 @@ namespace CarRentalDotnet
         private void btnAddCar_Click(object sender, EventArgs e)
         {
           
-           
-
+           AddEditForm addEditForm = new AddEditForm();
+            addEditForm.MdiParent = this.MdiParent;
+            addEditForm.Show();
         }
 
         private void btnEditCar_Click(object sender, EventArgs e)
         {
-
+            var id = (int)gvVechicleList.SelectedRows[0].Cells["Id"].Value;
+            var car = _db.TypesOfCars.FirstOrDefault(q => q.id == id);
+            AddEditForm addEditForm = new AddEditForm(car);
+            addEditForm.MdiParent = this.MdiParent;
+            addEditForm.Show();
         }
 
         private void btnDelteCar_Click(object sender, EventArgs e)
         {
+            var id = (int)gvVechicleList.SelectedRows[0].Cells["Id"].Value;
+            var car = _db.TypesOfCars.FirstOrDefault(q => q.id == id);
+            _db.TypesOfCars.Remove(car);
+            _db.SaveChanges();
+            gvVechicleList.Refresh();
 
         }
     }

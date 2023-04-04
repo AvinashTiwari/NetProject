@@ -12,15 +12,21 @@ namespace CarRentalDotnet
 {
     public partial class AddEditForm : Form
     {
+        private bool isEditMode;
+        private readonly CarRentalEntities _db;
         public AddEditForm()
         {
             InitializeComponent();
             lblTitle.Text = "Add New Vechicle";
+            isEditMode = false;
+            _db = new CarRentalEntities();
         }
 
         public AddEditForm(TypesOfCar carToEdit) {
             lblTitle.Text = "Edit Vechicle";
             PopulateFileds(carToEdit);
+            isEditMode = true;
+            _db = new CarRentalEntities();
         }
 
         private void PopulateFileds(TypesOfCar carToEdit)
@@ -34,7 +40,17 @@ namespace CarRentalDotnet
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
 
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (isEditMode)
+            {
+                
+            }
+            else { 
+            }
         }
     }
 }
