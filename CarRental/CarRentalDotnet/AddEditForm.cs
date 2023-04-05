@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -23,6 +24,8 @@ namespace CarRentalDotnet
         }
 
         public AddEditForm(TypesOfCar carToEdit) {
+            InitializeComponent();
+       
             lblTitle.Text = "Edit Vechicle";
             PopulateFileds(carToEdit);
             isEditMode = true;
@@ -31,10 +34,11 @@ namespace CarRentalDotnet
 
         private void PopulateFileds(TypesOfCar carToEdit)
         {
+            lblId.Text = carToEdit.id.ToString();
             tbMake.Text = carToEdit.Make;
             tbModel.Text = carToEdit.Model;
-            tbVin.Text = carToEdit.VIN.ToString();
-            tbYear.Text = carToEdit.Year.ToString();
+            tbVin.Text = carToEdit.VIN;
+            tbYear.Text = Convert.ToString(carToEdit.Year);
             tbLicensePlateNumber.Text = carToEdit.LicensePlateNumber;
         }
 
@@ -47,9 +51,28 @@ namespace CarRentalDotnet
         {
             if (isEditMode)
             {
+                var id = int.Parse(lblId.Text);
+                var car = _db.TypesOfCars.FirstOrDefault(q => q.id == id);
+                car.Model = tbModel.Text;
+                car.Make = tbMake.Text;
+                car.VIN = tbVin.Text;
+                car.Year = int.Parse(tbYear.Text);
+                car.LicensePlateNumber = tbLicensePlateNumber.Text;
+                _db.SaveChanges();
+
                 
             }
-            else { 
+            else {
+                var newCar = new TypesOfCar
+                {
+                    Model = tbModel.Text,
+                Make = tbMake.Text,
+                VIN = tbVin.Text,
+                Year = int.Parse(tbYear.Text),
+                LicensePlateNumber = tbLicensePlateNumber.Text
+            };
+                _db.TypesOfCars.Add(newCar);
+                _db.SaveChanges();
             }
         }
     }

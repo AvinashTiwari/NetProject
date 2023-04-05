@@ -42,6 +42,7 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
+            this.lblId = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -180,11 +181,20 @@
             this.lblTitle.Size = new System.Drawing.Size(0, 79);
             this.lblTitle.TabIndex = 1;
             // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Location = new System.Drawing.Point(360, 36);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(0, 16);
+            this.lblId.TabIndex = 3;
+            // 
             // AddEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblId);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
@@ -214,5 +224,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbMake;
+        private System.Windows.Forms.Label lblId;
     }
 }
