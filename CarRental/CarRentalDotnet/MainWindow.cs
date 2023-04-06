@@ -31,5 +31,14 @@ namespace CarRentalDotnet
             vechicleListing.MdiParent = this;
             vechicleListing.Show();
         }
+
+        private void viewArchiveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var manageRentalRecords = new ManageRentalRecords();
+            manageRentalRecords.MdiParent = this;
+    
+            manageRentalRecords.Show();
+
+        }
     }
 }

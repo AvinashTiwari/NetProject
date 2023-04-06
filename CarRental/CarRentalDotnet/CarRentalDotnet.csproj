@@ -94,6 +94,12 @@
     <Compile Include="MainWindow.Designer.cs">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManageRentalRecords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageRentalRecords.Designer.cs">
+      <DependentUpon>ManageRentalRecords.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManageVechLisiting.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageRentalRecords.resx">
+      <DependentUpon>ManageRentalRecords.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManageVechLisiting.resx">
       <DependentUpon>ManageVechLisiting.cs</DependentUpon>
