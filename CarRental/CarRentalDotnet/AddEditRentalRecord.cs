@@ -11,10 +11,10 @@ using System.Windows.Forms;
 namespace CarRentalDotnet
 {
    
-    public partial class AddRentalRecord : Form
+    public partial class AddEditRentalRecord : Form
     {
         private readonly CarRentalEntities carRentalEntities;
-        public AddRentalRecord()
+        public AddEditRentalRecord()
         {
             InitializeComponent();
             carRentalEntities = new CarRentalEntities();

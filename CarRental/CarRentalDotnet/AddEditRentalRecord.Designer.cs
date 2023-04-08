@@ -1,6 +1,6 @@
 ﻿namespace CarRentalDotnet
 {
-    partial class AddRentalRecord
+    partial class AddEditRentalRecord
     {
         /// <summary>
         /// Required designer variable.

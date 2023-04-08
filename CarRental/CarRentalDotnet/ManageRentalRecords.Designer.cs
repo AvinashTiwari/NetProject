@@ -98,6 +98,7 @@
             this.Controls.Add(this.gvRecordList);
             this.Name = "ManageRentalRecords";
             this.Text = "Manage Rental Records";
+            this.Load += new System.EventHandler(this.ManageRentalRecords_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gvRecordList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
