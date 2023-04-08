@@ -13,11 +13,45 @@ namespace CarRentalDotnet
    
     public partial class AddEditRentalRecord : Form
     {
-        private readonly CarRentalEntities carRentalEntities;
+        private bool isEditMode;
+        private readonly CarRentalEntities _db;
         public AddEditRentalRecord()
         {
             InitializeComponent();
-            carRentalEntities = new CarRentalEntities();
+            lblTitle.Text = "Add New Rental";
+            this.Text = "Add New Rental";
+            isEditMode = false;
+            _db = new CarRentalEntities();
+        }
+        public AddEditRentalRecord(CarRentalRecord recordToEdit)
+        {
+            InitializeComponent();
+            lblTitle.Text = "Edit Rental Record";
+            this.Text = "Edit Rental Record";
+            
+
+            if (recordToEdit == null)
+            {
+                MessageBox.Show("Please ensure that you selected a valid record to edit");
+                Close();
+            }
+            else {
+                isEditMode = false;
+                _db = new CarRentalEntities();
+                PopulateFileds(recordToEdit);
+            }
+
+
+          
+        }
+
+        private void PopulateFileds(CarRentalRecord recordToEdit)
+        {
+             tbCustomerName.Text = recordToEdit.CustomerName;
+             dtRented.Value = (DateTime)recordToEdit.DateRented;
+            dtReturned.Value = (DateTime)recordToEdit.DateReturned;
+            //cbTypeOfCar.SelectedItem.ToString();
+            tbCost.Text = recordToEdit.Cost.ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -50,8 +84,8 @@ namespace CarRentalDotnet
                     rentalRecord.DateReturned = dateIn;
                     rentalRecord.Cost = Convert.ToDecimal(cost);
                     rentalRecord.TypeOfCarId = Convert.ToInt32(cbTypeOfCar.SelectedValue);
-                    carRentalEntities.CarRentalRecords.Add(rentalRecord);
-                    carRentalEntities.SaveChanges();
+                    _db.CarRentalRecords.Add(rentalRecord);
+                    _db.SaveChanges();
 
                     MessageBox.Show($"Customer Name : {customerName} \n\r " +
                         $"Date Rented : {dateOut} \n\r " +
@@ -68,7 +102,7 @@ namespace CarRentalDotnet
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            var cars = carRentalEntities.TypesOfCars.Select(q => new
+            var cars = _db.TypesOfCars.Select(q => new
             {
                 ID = q.id,
                 Name = q.Make + " " +  q.Model
