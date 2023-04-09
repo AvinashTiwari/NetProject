@@ -30,11 +30,11 @@ namespace CarRentalDotnet
         {
             var id = (int)gvRecordList.SelectedRows[0].Cells["Id"].Value;
             var car = _db.CarRentalRecords.FirstOrDefault(q => q.id == id);
-            /*
-            AddEditForm addEditForm = new AddEditForm(car);
+
+            AddEditRentalRecord  addEditForm = new AddEditRentalRecord(car);
             addEditForm.MdiParent = this.MdiParent;
             addEditForm.Show();
-            */
+            
         }
 
         private void btnDelteRecord_Click(object sender, EventArgs e)

@@ -40,6 +40,7 @@
             this.dtRented = new System.Windows.Forms.DateTimePicker();
             this.dtReturned = new System.Windows.Forms.DateTimePicker();
             this.cbTypeOfCar = new System.Windows.Forms.ComboBox();
+            this.lblRecordId = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -154,12 +155,21 @@
             this.cbTypeOfCar.Size = new System.Drawing.Size(200, 52);
             this.cbTypeOfCar.TabIndex = 11;
             // 
+            // lblRecordId
+            // 
+            this.lblRecordId.AutoSize = true;
+            this.lblRecordId.Location = new System.Drawing.Point(671, 92);
+            this.lblRecordId.Name = "lblRecordId";
+            this.lblRecordId.Size = new System.Drawing.Size(0, 16);
+            this.lblRecordId.TabIndex = 12;
+            // 
             // AddEditRentalRecord
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblRecordId);
             this.Controls.Add(this.cbTypeOfCar);
             this.Controls.Add(this.dtReturned);
             this.Controls.Add(this.dtRented);
@@ -194,6 +204,7 @@
         private System.Windows.Forms.TextBox tbCustomerName;
         private System.Windows.Forms.DateTimePicker dtRented;
         private System.Windows.Forms.DateTimePicker dtReturned;
+        private System.Windows.Forms.Label lblRecordId;
     }
 }
 

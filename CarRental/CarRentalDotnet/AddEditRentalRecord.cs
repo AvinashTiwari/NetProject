@@ -52,6 +52,7 @@ namespace CarRentalDotnet
             dtReturned.Value = (DateTime)recordToEdit.DateReturned;
             //cbTypeOfCar.SelectedItem.ToString();
             tbCost.Text = recordToEdit.Cost.ToString();
+            lblRecordId.Text = recordToEdit.id.ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -78,20 +79,44 @@ namespace CarRentalDotnet
 
                 if (isValid)
                 {
-                    var rentalRecord = new CarRentalRecord();
-                    rentalRecord.CustomerName = customerName;
-                    rentalRecord.DateRented = dateOut;
-                    rentalRecord.DateReturned = dateIn;
-                    rentalRecord.Cost = Convert.ToDecimal(cost);
-                    rentalRecord.TypeOfCarId = Convert.ToInt32(cbTypeOfCar.SelectedValue);
-                    _db.CarRentalRecords.Add(rentalRecord);
-                    _db.SaveChanges();
+                    if (isEditMode)
+                    {
+                        var id = int.Parse(lblRecordId.Text);
+                        var rentalRecord = _db.CarRentalRecords.FirstOrDefault(q => q.id == id);
+                        rentalRecord.CustomerName = customerName;
+                        rentalRecord.DateRented = dateOut;
+                        rentalRecord.DateReturned = dateIn;
+                        rentalRecord.Cost = Convert.ToDecimal(cost);
+                        rentalRecord.TypeOfCarId = Convert.ToInt32(cbTypeOfCar.SelectedValue);
+                        _db.SaveChanges();
+                        MessageBox.Show($"Customer Name : {customerName} \n\r " +
+                  $"Date Rented : {dateOut} \n\r " +
+                  $"Date Returned : {dateIn} \n\r " +
+                   $"Car rented  : {car} \n\r " +
+                     $"Cost for rented  : {cost} \n\r ");
+                        Close();
 
-                    MessageBox.Show($"Customer Name : {customerName} \n\r " +
-                        $"Date Rented : {dateOut} \n\r " +
-                        $"Date Returned : {dateIn} \n\r " +
-                         $"Car rented  : {car} \n\r " +
-                           $"Cost for rented  : {cost} \n\r ");
+                    }
+                    else {
+                        var rentalRecord = new CarRentalRecord();
+                        rentalRecord.CustomerName = customerName;
+                        rentalRecord.DateRented = dateOut;
+                        rentalRecord.DateReturned = dateIn;
+                        rentalRecord.Cost = Convert.ToDecimal(cost);
+                        rentalRecord.TypeOfCarId = Convert.ToInt32(cbTypeOfCar.SelectedValue);
+                        _db.CarRentalRecords.Add(rentalRecord);
+                        _db.SaveChanges();
+
+                        MessageBox.Show($"Customer Name : {customerName} \n\r " +
+                            $"Date Rented : {dateOut} \n\r " +
+                            $"Date Returned : {dateIn} \n\r " +
+                             $"Car rented  : {car} \n\r " +
+                               $"Cost for rented  : {cost} \n\r ");
+                        Close();
+                    }
+
+
+                 
                 }
             }
             catch (Exception ex)
