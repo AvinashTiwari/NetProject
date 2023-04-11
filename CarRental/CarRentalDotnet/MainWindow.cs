@@ -27,9 +27,15 @@ namespace CarRentalDotnet
 
         private void manageVechicleListingToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var vechicleListing = new ManageVechLisiting();
-            vechicleListing.MdiParent = this;
-            vechicleListing.Show();
+            var OpenForm = Application.OpenForms.Cast<Form>();
+            var isOpen = OpenForm.Any(q => q.Name == "ManageVechLisiting");
+            
+            if (!isOpen) {
+                var vechicleListing = new ManageVechLisiting();
+                vechicleListing.MdiParent = this;
+                vechicleListing.Show();
+            }
+           
         }
 
         private void viewArchiveToolStripMenuItem_Click(object sender, EventArgs e)

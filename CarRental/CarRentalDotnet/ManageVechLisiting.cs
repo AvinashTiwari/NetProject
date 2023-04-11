@@ -36,7 +36,7 @@ namespace CarRentalDotnet
         private void btnAddCar_Click(object sender, EventArgs e)
         {
           
-           AddEditForm addEditForm = new AddEditForm();
+           AddEditForm addEditForm = new AddEditForm(this);
             addEditForm.MdiParent = this.MdiParent;
             addEditForm.Show();
         }
@@ -45,7 +45,7 @@ namespace CarRentalDotnet
         {
             var id = (int)gvVechicleList.SelectedRows[0].Cells["Id"].Value;
             var car = _db.TypesOfCars.FirstOrDefault(q => q.id == id);
-            AddEditForm addEditForm = new AddEditForm(car);
+            AddEditForm addEditForm = new AddEditForm(car, this);
             addEditForm.MdiParent = this.MdiParent;
             addEditForm.Show();
         }
@@ -58,6 +58,20 @@ namespace CarRentalDotnet
             _db.SaveChanges();
             gvVechicleList.Refresh();
 
+        }
+
+        public void PopulateGrid() {
+            var cars = _db.TypesOfCars.Select(q => new {
+                ID = q.id,
+                Make = q.Make,
+                Model = q.Model,
+                VIN = q.VIN,
+                Year = q.Year,
+                LicensePlateNumber = q.LicensePlateNumber,
+                q.id
+            }).ToList();
+            gvVechicleList.DataSource = cars;
+            gvVechicleList.Columns[5].Visible = false;
         }
     }
 }
