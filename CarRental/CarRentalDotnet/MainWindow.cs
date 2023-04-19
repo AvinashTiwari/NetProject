@@ -12,9 +12,17 @@ namespace CarRentalDotnet
 {
     public partial class MainWindow : Form
     {
+        private Login _login;
+        public string _roleName;
         public MainWindow()
         {
             InitializeComponent();
+        }
+        public MainWindow(Login login, string roleName)
+        {
+            InitializeComponent();
+            _roleName = roleName;
+            _login = login;
         }
 
         private void addRendtalRecordToolStripMenuItem_Click(object sender, EventArgs e)
@@ -45,6 +53,18 @@ namespace CarRentalDotnet
     
             manageRentalRecords.Show();
 
+        }
+
+        private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            _login.Close();
+        }
+
+        private void manageUserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var manageUser = new ManageUser();
+            manageUser.MdiParent = this;
+            manageUser.Show();
         }
     }
 }

@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tbPassword = new System.Windows.Forms.TextBox();
+            this.Password = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tbUserName = new System.Windows.Forms.TextBox();
-            this.Password = new System.Windows.Forms.Label();
-            this.tbPassword = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
@@ -55,6 +55,23 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(430, 143);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
+            // tbPassword
+            // 
+            this.tbPassword.Location = new System.Drawing.Point(218, 74);
+            this.tbPassword.Name = "tbPassword";
+            this.tbPassword.PasswordChar = '*';
+            this.tbPassword.Size = new System.Drawing.Size(209, 22);
+            this.tbPassword.TabIndex = 3;
+            // 
+            // Password
+            // 
+            this.Password.AutoSize = true;
+            this.Password.Location = new System.Drawing.Point(3, 71);
+            this.Password.Name = "Password";
+            this.Password.Size = new System.Drawing.Size(67, 16);
+            this.Password.TabIndex = 2;
+            this.Password.Text = "Password";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -70,22 +87,6 @@
             this.tbUserName.Name = "tbUserName";
             this.tbUserName.Size = new System.Drawing.Size(209, 22);
             this.tbUserName.TabIndex = 1;
-            // 
-            // Password
-            // 
-            this.Password.AutoSize = true;
-            this.Password.Location = new System.Drawing.Point(3, 71);
-            this.Password.Name = "Password";
-            this.Password.Size = new System.Drawing.Size(67, 16);
-            this.Password.TabIndex = 2;
-            this.Password.Text = "Password";
-            // 
-            // tbPassword
-            // 
-            this.tbPassword.Location = new System.Drawing.Point(218, 74);
-            this.tbPassword.Name = "tbPassword";
-            this.tbPassword.Size = new System.Drawing.Size(209, 22);
-            this.tbPassword.TabIndex = 3;
             // 
             // btnLogin
             // 
