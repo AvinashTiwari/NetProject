@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.btnDeactivateUser = new System.Windows.Forms.Button();
-            this.btnEditUser = new System.Windows.Forms.Button();
+            this.btnResetPassword = new System.Windows.Forms.Button();
             this.btnAddUser = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.gvVechicleList = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.gvVechicleList)).BeginInit();
+            this.gvUserList = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.gvUserList)).BeginInit();
             this.SuspendLayout();
             // 
             // btnDeactivateUser
@@ -44,15 +44,17 @@
             this.btnDeactivateUser.TabIndex = 9;
             this.btnDeactivateUser.Text = "Deactivate user";
             this.btnDeactivateUser.UseVisualStyleBackColor = true;
+            this.btnDeactivateUser.Click += new System.EventHandler(this.btnDeactivateUser_Click);
             // 
-            // btnEditUser
+            // btnResetPassword
             // 
-            this.btnEditUser.Location = new System.Drawing.Point(187, 394);
-            this.btnEditUser.Name = "btnEditUser";
-            this.btnEditUser.Size = new System.Drawing.Size(99, 46);
-            this.btnEditUser.TabIndex = 8;
-            this.btnEditUser.Text = "Edit Car";
-            this.btnEditUser.UseVisualStyleBackColor = true;
+            this.btnResetPassword.Location = new System.Drawing.Point(187, 394);
+            this.btnResetPassword.Name = "btnResetPassword";
+            this.btnResetPassword.Size = new System.Drawing.Size(99, 46);
+            this.btnResetPassword.TabIndex = 8;
+            this.btnResetPassword.Text = "Reset Password";
+            this.btnResetPassword.UseVisualStyleBackColor = true;
+            this.btnResetPassword.Click += new System.EventHandler(this.btnEditUser_Click);
             // 
             // btnAddUser
             // 
@@ -60,8 +62,9 @@
             this.btnAddUser.Name = "btnAddUser";
             this.btnAddUser.Size = new System.Drawing.Size(99, 48);
             this.btnAddUser.TabIndex = 7;
-            this.btnAddUser.Text = "Add New Car";
+            this.btnAddUser.Text = "Add New User";
             this.btnAddUser.UseVisualStyleBackColor = true;
+            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
             // 
             // label1
             // 
@@ -73,15 +76,15 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Manage Users";
             // 
-            // gvVechicleList
+            // gvUserList
             // 
-            this.gvVechicleList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvVechicleList.Location = new System.Drawing.Point(28, 95);
-            this.gvVechicleList.Name = "gvVechicleList";
-            this.gvVechicleList.RowHeadersWidth = 51;
-            this.gvVechicleList.RowTemplate.Height = 24;
-            this.gvVechicleList.Size = new System.Drawing.Size(745, 293);
-            this.gvVechicleList.TabIndex = 5;
+            this.gvUserList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gvUserList.Location = new System.Drawing.Point(28, 95);
+            this.gvUserList.Name = "gvUserList";
+            this.gvUserList.RowHeadersWidth = 51;
+            this.gvUserList.RowTemplate.Height = 24;
+            this.gvUserList.Size = new System.Drawing.Size(745, 293);
+            this.gvUserList.TabIndex = 5;
             // 
             // ManageUser
             // 
@@ -89,13 +92,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnDeactivateUser);
-            this.Controls.Add(this.btnEditUser);
+            this.Controls.Add(this.btnResetPassword);
             this.Controls.Add(this.btnAddUser);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.gvVechicleList);
+            this.Controls.Add(this.gvUserList);
             this.Name = "ManageUser";
             this.Text = "ManageUser";
-            ((System.ComponentModel.ISupportInitialize)(this.gvVechicleList)).EndInit();
+            this.Load += new System.EventHandler(this.ManageUser_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.gvUserList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -104,9 +108,9 @@
         #endregion
 
         private System.Windows.Forms.Button btnDeactivateUser;
-        private System.Windows.Forms.Button btnEditUser;
+        private System.Windows.Forms.Button btnResetPassword;
         private System.Windows.Forms.Button btnAddUser;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView gvVechicleList;
+        private System.Windows.Forms.DataGridView gvUserList;
     }
 }

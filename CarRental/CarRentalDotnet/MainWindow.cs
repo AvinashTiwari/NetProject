@@ -66,5 +66,14 @@ namespace CarRentalDotnet
             manageUser.MdiParent = this;
             manageUser.Show();
         }
+
+        private void MainWindow_Load(object sender, EventArgs e)
+        {
+            
+            tsiLoginText.Text = $"Logged in As : {_roleName}";
+            if (_roleName != "Admin") {
+                manageUserToolStripMenuItem.Visible = false;
+            }
+        }
     }
 }

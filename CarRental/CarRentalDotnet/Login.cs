@@ -40,7 +40,7 @@ namespace CarRentalDotnet
                 }
                 var hashed_password = sBuilder.ToString();
                 */
-                var user = _db.Users.FirstOrDefault(q => q.username == username && q.password == password);
+                var user = _db.Users.FirstOrDefault(q => q.username == username && q.password == password && q.isActive == true);
                 if (user != null)
                 {
                     var role = user.UserRoles.FirstOrDefault();
