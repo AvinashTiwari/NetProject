@@ -1,0 +1,11 @@
+E:\NetProject\DataEntry\DataEntryProject\DataEntryProject\bin\Debug\DataEntryProject.exe.config
+E:\NetProject\DataEntry\DataEntryProject\DataEntryProject\bin\Debug\DataEntryProject.exe
+E:\NetProject\DataEntry\DataEntryProject\DataEntryProject\bin\Debug\DataEntryProject.pdb
+E:\NetProject\DataEntry\DataEntryProject\DataEntryProject\obj\Debug\DataEntryProject.csproj.AssemblyReference.cache
+E:\NetProject\DataEntry\DataEntryProject\DataEntryProject\obj\Debug\DataEntryProject.csproj.SuggestedBindingRedirects.cache
+E:\NetProject\DataEntry\DataEntryProject\DataEntryProject\obj\Debug\DataEntryProject.frmDataEntry.resources
+E:\NetProject\DataEntry\DataEntryProject\DataEntryProject\obj\Debug\DataEntryProject.Properties.Resources.resources
+E:\NetProject\DataEntry\DataEntryProject\DataEntryProject\obj\Debug\DataEntryProject.csproj.GenerateResource.cache
+E:\NetProject\DataEntry\DataEntryProject\DataEntryProject\obj\Debug\DataEntryProject.csproj.CoreCompileInputs.cache
+E:\NetProject\DataEntry\DataEntryProject\DataEntryProject\obj\Debug\DataEntryProject.exe
+E:\NetProject\DataEntry\DataEntryProject\DataEntryProject\obj\Debug\DataEntryProject.pdb

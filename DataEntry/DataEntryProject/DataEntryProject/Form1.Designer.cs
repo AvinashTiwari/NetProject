@@ -46,7 +46,7 @@
             this.btnPause = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnStart = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTimer = new System.Windows.Forms.TextBox();
             this.timTimer = new System.Windows.Forms.Timer(this.components);
             this.grbDataEntry.SuspendLayout();
             this.grbTimer.SuspendLayout();
@@ -82,6 +82,8 @@
             this.btnClear.Text = "&Clear";
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            this.btnClear.MouseLeave += new System.EventHandler(this.btnButtons_Leave);
+            this.btnClear.MouseHover += new System.EventHandler(this.btnButtons_Hover);
             // 
             // btnAccept
             // 
@@ -91,6 +93,9 @@
             this.btnAccept.TabIndex = 11;
             this.btnAccept.Text = "&Accept";
             this.btnAccept.UseVisualStyleBackColor = true;
+            this.btnAccept.Click += new System.EventHandler(this.btnAccept_Click);
+            this.btnAccept.MouseLeave += new System.EventHandler(this.btnButtons_Leave);
+            this.btnAccept.MouseHover += new System.EventHandler(this.btnButtons_Hover);
             // 
             // txtZip
             // 
@@ -98,6 +103,7 @@
             this.txtZip.Name = "txtZip";
             this.txtZip.Size = new System.Drawing.Size(125, 22);
             this.txtZip.TabIndex = 10;
+            this.txtZip.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInput_KeyPress);
             // 
             // txtState
             // 
@@ -105,6 +111,7 @@
             this.txtState.Name = "txtState";
             this.txtState.Size = new System.Drawing.Size(125, 22);
             this.txtState.TabIndex = 9;
+            this.txtState.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInput_KeyPress);
             // 
             // txtCity
             // 
@@ -112,6 +119,7 @@
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(125, 22);
             this.txtCity.TabIndex = 8;
+            this.txtCity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInput_KeyPress);
             // 
             // txtAddress
             // 
@@ -119,6 +127,7 @@
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(125, 22);
             this.txtAddress.TabIndex = 7;
+            this.txtAddress.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInput_KeyPress);
             // 
             // txtName
             // 
@@ -126,6 +135,7 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(125, 22);
             this.txtName.TabIndex = 1;
+            this.txtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInput_KeyPress);
             // 
             // label5
             // 
@@ -177,7 +187,7 @@
             this.grbTimer.Controls.Add(this.btnPause);
             this.grbTimer.Controls.Add(this.btnExit);
             this.grbTimer.Controls.Add(this.btnStart);
-            this.grbTimer.Controls.Add(this.textBox1);
+            this.grbTimer.Controls.Add(this.txtTimer);
             this.grbTimer.Location = new System.Drawing.Point(351, 39);
             this.grbTimer.Name = "grbTimer";
             this.grbTimer.Size = new System.Drawing.Size(190, 186);
@@ -193,6 +203,7 @@
             this.btnPause.TabIndex = 15;
             this.btnPause.Text = "&Pause";
             this.btnPause.UseVisualStyleBackColor = true;
+            this.btnPause.Click += new System.EventHandler(this.btnPause_Click);
             // 
             // btnExit
             // 
@@ -212,21 +223,23 @@
             this.btnStart.TabIndex = 13;
             this.btnStart.Text = "&Start";
             this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
-            // textBox1
+            // txtTimer
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(7, 22);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(100, 27);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "00:00:00";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimer.Location = new System.Drawing.Point(7, 22);
+            this.txtTimer.Name = "txtTimer";
+            this.txtTimer.ReadOnly = true;
+            this.txtTimer.Size = new System.Drawing.Size(100, 27);
+            this.txtTimer.TabIndex = 0;
+            this.txtTimer.Text = "00:00:00";
+            this.txtTimer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // timTimer
             // 
             this.timTimer.Interval = 1000;
+            this.timTimer.Tick += new System.EventHandler(this.timTimer_Tick);
             // 
             // frmDataEntry
             // 
@@ -261,7 +274,7 @@
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnAccept;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTimer;
         private System.Windows.Forms.Button btnPause;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnStart;
