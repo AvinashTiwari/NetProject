@@ -9,3 +9,4 @@ E:\NetProject\DataEntry\DataEntryProject\DataEntryProject\obj\Debug\DataEntryPro
 E:\NetProject\DataEntry\DataEntryProject\DataEntryProject\obj\Debug\DataEntryProject.csproj.CoreCompileInputs.cache
 E:\NetProject\DataEntry\DataEntryProject\DataEntryProject\obj\Debug\DataEntryProject.exe
 E:\NetProject\DataEntry\DataEntryProject\DataEntryProject\obj\Debug\DataEntryProject.pdb
+E:\NetProject\DataEntry\DataEntryProject\DataEntryProject\obj\Debug\DataEntryProject.Books.resources
