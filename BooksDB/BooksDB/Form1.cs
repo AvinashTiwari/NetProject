@@ -9,28 +9,27 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DataEntryProject
+namespace BooksDB
 {
-    public partial class Books : Form
+    public partial class frmTitles : Form
     {
         OleDbConnection conn;
         OleDbCommand titlesCommand;
         OleDbDataAdapter titlesAdapter;
         DataTable titlesTable;
         CurrencyManager titlesManager;
-        public Books()
+
+        public frmTitles()
         {
             InitializeComponent();
-          
         }
 
-        private void Books_Load(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
-            var connString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=E:\NetProject\DataEntry\DataEntryProject\DataEntryProject\Books.accdb; Persist Security Info = False;";
+            var connString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\DB\Books.accdb; Persist Security Info = False;";
 
             conn = new OleDbConnection(connString);
             conn.Open();
-            txtTitle.Text = conn.State.ToString();
             titlesCommand = new OleDbCommand("Select * from Titles", conn);
             titlesAdapter = new OleDbDataAdapter();
             titlesAdapter.SelectCommand = titlesCommand;
@@ -44,12 +43,33 @@ namespace DataEntryProject
             txtPubID.DataBindings.Add("Text", titlesTable, "PubId");
 
             //establish currency manager
-            titlesManager = (CurrencyManager)BindingContext[titlesTable];
+            titlesManager = (CurrencyManager) BindingContext[titlesTable];
 
             conn.Close();
             conn.Dispose();
             titlesAdapter.Dispose();
             titlesTable.Dispose();
+
+        }
+
+        private void btnFirst_Click(object sender, EventArgs e)
+        {
+            titlesManager.Position = 0;
+        }
+
+        private void btnPrevious_Click(object sender, EventArgs e)
+        {
+            titlesManager.Position--; 
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            titlesManager.Position++;
+        }
+
+        private void btnLast_Click(object sender, EventArgs e)
+        {
+            titlesManager.Position = titlesManager.Count - 1;
         }
     }
 }

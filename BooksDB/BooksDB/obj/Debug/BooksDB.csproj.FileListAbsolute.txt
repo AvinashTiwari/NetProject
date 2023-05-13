@@ -1,0 +1,10 @@
+c:\users\windows\source\repos\BooksDB\BooksDB\bin\Debug\BooksDB.exe.config
+c:\users\windows\source\repos\BooksDB\BooksDB\bin\Debug\BooksDB.exe
+c:\users\windows\source\repos\BooksDB\BooksDB\bin\Debug\BooksDB.pdb
+c:\users\windows\source\repos\BooksDB\BooksDB\obj\Debug\BooksDB.csprojResolveAssemblyReference.cache
+c:\users\windows\source\repos\BooksDB\BooksDB\obj\Debug\BooksDB.frmTitles.resources
+c:\users\windows\source\repos\BooksDB\BooksDB\obj\Debug\BooksDB.Properties.Resources.resources
+c:\users\windows\source\repos\BooksDB\BooksDB\obj\Debug\BooksDB.csproj.GenerateResource.cache
+c:\users\windows\source\repos\BooksDB\BooksDB\obj\Debug\BooksDB.csproj.CoreCompileInputs.cache
+c:\users\windows\source\repos\BooksDB\BooksDB\obj\Debug\BooksDB.exe
+c:\users\windows\source\repos\BooksDB\BooksDB\obj\Debug\BooksDB.pdb
