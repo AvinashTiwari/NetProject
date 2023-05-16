@@ -1,0 +1,10 @@
+c:\users\windows\source\repos\NorthWindExercise\NorthWindExercise\bin\Debug\NorthWindExercise.exe.config
+c:\users\windows\source\repos\NorthWindExercise\NorthWindExercise\bin\Debug\NorthWindExercise.exe
+c:\users\windows\source\repos\NorthWindExercise\NorthWindExercise\bin\Debug\NorthWindExercise.pdb
+c:\users\windows\source\repos\NorthWindExercise\NorthWindExercise\obj\Debug\NorthWindExercise.csprojResolveAssemblyReference.cache
+c:\users\windows\source\repos\NorthWindExercise\NorthWindExercise\obj\Debug\NorthWindExercise.frmTraders.resources
+c:\users\windows\source\repos\NorthWindExercise\NorthWindExercise\obj\Debug\NorthWindExercise.Properties.Resources.resources
+c:\users\windows\source\repos\NorthWindExercise\NorthWindExercise\obj\Debug\NorthWindExercise.csproj.GenerateResource.cache
+c:\users\windows\source\repos\NorthWindExercise\NorthWindExercise\obj\Debug\NorthWindExercise.csproj.CoreCompileInputs.cache
+c:\users\windows\source\repos\NorthWindExercise\NorthWindExercise\obj\Debug\NorthWindExercise.exe
+c:\users\windows\source\repos\NorthWindExercise\NorthWindExercise\obj\Debug\NorthWindExercise.pdb
